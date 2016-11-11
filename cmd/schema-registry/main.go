@@ -28,6 +28,8 @@ func main() {
 	flag.StringVar(&tlscert, "tlscert", "", "Path to TLS certificate.")
 	flag.StringVar(&tlskey, "tlskey", "", "Path to TLS key.")
 
+	flag.Parse()
+
 	db, err := bolt.Open(dbpath, 0600, nil)
 	if err != nil {
 		stdlog.Fatal(err)
