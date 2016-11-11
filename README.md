@@ -68,6 +68,7 @@ curl -XPUT localhost:8080/schema/test -d '
   }
 }
 '
+```
 
 Validate a value against the schema. The response contains an array of errors if any are present.
 
