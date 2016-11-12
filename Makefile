@@ -22,7 +22,7 @@ build-install: install test-install
 tls:
 	@if [ ! -a cert.pem ]; then \
 		echo >&2 'Creating self-signed TLS certs.'; \
-		go run $(GOROOT)/src/crypto/tls/generate_cert.go --host localhost; \
+		go run $(shell go env GOROOT)/src/crypto/tls/generate_cert.go --host localhost; \
 	fi
 
 compiledaemon:
