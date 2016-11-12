@@ -1,0 +1,8 @@
+package: github.com/chop-dbhi/schema-registry
+import:
+- package: github.com/boltdb/bolt
+- package: github.com/xeipuuv/gojsonschema
+- package: github.com/go-kit/kit
+  subpackages:
+  - endpoint
+- package: github.com/linkedin/goavro
