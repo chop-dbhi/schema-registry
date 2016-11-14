@@ -68,4 +68,9 @@ dist-zip:
 
 dist: dist-build dist-zip
 
+build-docker:
+	# docker build -t dbhi/$(PROG_NAME):$(shell ./dist/darwin-amd64/schema-registry version) .
+	docker build -t dbhi/$(PROG_NAME):latest .
+
+
 .PHONY: test assets build dist
